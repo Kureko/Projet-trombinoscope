@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Projet Trombinoscope</title>
+
+        <style>
+
+        :root {
+          --primary-color: black;
+          --secondary-color: white;  
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial;
+            cursor: default;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        #card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+        }   
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            height: 350px;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            margin: 10px 0;
+            padding: 40px 0 20px 0;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+
+        #formateur {
+            background: black;
+        }
+
+        .card .name-container img {
+            border-radius: 50%;
+            height: 128px;
+            width: 128px;
+        }
+
+        .name-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card ol {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-weight: 400;
+            max-height: 150px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .card li {
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 10px auto;
+        }
+
+        .card .name {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            margin-top: -20px;
+            border-radius: 5px;
+        }
+
+        .card-title {
+            width: 80%;
+            text-align: center;
+            margin: 0;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .media {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 20px 0;
+            color: var(--primary-color);
+        }
+
+        .media .profil {
+            padding: 10px;
+            background: var(--secondary-color);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .media .media-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .media-icon img {
+            height: 32px;
+            border-radius: 2px;
+            margin: 0 5px;
+        }
+
+        @media screen and (min-width: 640px) {
+            .card {
+                flex: 1 0;
+                margin: 10px 1vw;
+                width: 90%;
+                height: 50vw;
+                max-height: 500px;
+                font-size: 20px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .card-title {
+                font-size: 26px;
+            }
+
+            .media-icon img {
+                height: 48px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            #card-container {
+                flex-direction: row;
+                width: 95vw;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                flex: 1 0;
+                margin: 10px 1vw;
+                min-width: calc(33% - 5vw);
+                height: 50vw;
+                font-size: 20px;
+            }
+
+            .media {
+                align-items: center;
+                margin: 0;
+            }
+
+            .media-icon {
+                flex-direction: column-reverse;
+                max-height: calc(64px + 20px);
+                flex-wrap: wrap;
+            }
+
+            .media-icon img {
+                height: 32px;
+            }
+
+            .media-icon img:nth-child(odd) {
+                margin-bottom: 10px;
+            }
+        }
+
+        </style>
+    </head>
+    <body>
+        <h1 align="center">VERSION MOBILE</h1>
+        <section id="card-container">
+            <div class="card">
+                <div class="name-container">
+                    <img src="images/Alexis pro.jpg" >   
+                    <div class="name">Alexis Provot</div>
+                </div>
+                <div class="card-title">Licence Mathématiques Informatique</div>
+                <ol>
+                    <li>Capacité à chercher des infos</li>
+                    <li>Autodidacte</li>
+                    <li>Travail en groupe</li>
+                </ol> 
+                <div class="media">
+                    <div class="media-icon">
+                        <a target="_blank" href="https://github.com/Silaex">
+                            <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/alexis-provot-8588a7193/">
+                            <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/9506131951530100222-64.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <div class="profil">
+                        <a href="">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="name-container">
+                    <img src="images/Elo pro.jpg" >   
+                    <div class="name">Eloïse Marie</div>
+                </div>
+                <div class="card-title">Commercial</div>
+                <ol>
+                    <li>Pertinente</li>
+                    <li>Dynamique</li>
+                    <li>Aisance relationnelle</li>
+                </ol> 
+                <div class="media">
+                    <div class="media-icon">
+                        <a target="_blank" href="https://github.com/eloise87">
+                            <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                        </a>
+                        <a target="_blank" href="">
+                            <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/9506131951530100222-64.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <div class="profil">
+                        <a href="">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </body>
+</html>
