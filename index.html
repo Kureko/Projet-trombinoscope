@@ -5,228 +5,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Projet Trombinoscope</title>
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+     
 
-        <style>
-
-        :root {
-          --primary-color: black;
-          --secondary-color: white;  
-        }
-
-        #img-julien { background: url('images/Julien pro.jpg'); background-size: cover; background-position: center; }
-        #img-eloise { background: url('images/Elo pro.jpg'); background-size: cover; background-position: center; }
-        #img-ugo { background: url('images/Ugo pro.jpg'); background-size: cover; background-position: center; }
-        #img-thomas { background: url('images/Thomas pro.jpg'); background-size: cover; background-position: center; }
-        #img-nadege { background: url('images/Nadège pro.jpg'); background-size: cover; background-position: center; }
-        #img-alexis { background: url('images/Alexis pro.jpg'); background-size: cover; background-position: center; }
-        #img-willy { background: url('images/Willy pro.jpg'); background-size: cover; background-position: center; }
-        #img-gautier { background: url('images/Gautier Pro.jpg'); background-size: cover; background-position: center; }
-        #img-mehdi { background: url('images/Mehdi pro.jpg'); background-size: cover; background-position: top; }
-        #img-pierre { background: url('images/Pierre pro.jpg'); background-size: cover; background-position: bottom; }
-        #img-riad { background: url('images/Riad pro.jpg'); background-size: cover; background-position: center; }
-        #img-sibel { background: url('images/Sibel pro.jpg'); background-size: cover; background-position: center; }
-        #img-zakaria { background: url('images/Zak pro.jpg'); background-size: cover; background-position: center; }
         
-        
-        body {
-            margin: 0;
-            font-family: Arial;
-            cursor: default;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            cursor: pointer;
-        }
-
-        img {
-            vertical-align: middle;
-        }
-
-        .card-section {
-            width: 100vw;
-            margin: 0 auto;
-        }
-
-        #julien {
-            width: 80%;
-            margin: 40px auto;
-        }
-
-        #card-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px auto;
-        }   
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-            height: 450px;
-            background: var(--primary-color);
-            color: var(--secondary-color);
-            margin: 10px 0;
-            padding: 40px 0 20px 0;
-            font-weight: bold;
-            border-radius: 15px;
-        }
-
-        #formateur {
-            background: black;
-        }
-
-        .name-image {
-            border-radius: 50%;
-            height: 128px;
-            width: 128px;
-        }
-
-        .name-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .card ol {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            font-weight: 400;
-            max-height: 150px;
-            width: 80%;
-            text-align: center;
-        }
-
-        .card li {
-            text-align: center;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            margin: 10px auto;
-        }
-
-        .card .name {
-            background: var(--secondary-color);
-            color: var(--primary-color);
-            padding: 5px 10px;
-            margin-top: -20px;
-            border-radius: 5px;
-        }
-
-        .card-title {
-            width: 80%;
-            text-align: center;
-            margin: 0;
-            margin-top: 10px;
-            font-size: 20px;
-            text-decoration: underline;
-        }
-
-        .media {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 80%;
-            margin: 20px 0;
-            color: var(--primary-color);
-        }
-
-        .media .profil {
-            padding: 10px;
-            background: var(--secondary-color);
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .media .media-icon {
-            display: flex;
-            align-items: center;
-        }
-
-        .media-icon img {
-            height: 32px;
-            border-radius: 2px;
-            margin: 0 5px;
-        }
-
-        @media screen and (min-width: 640px) {
-
-            .card {
-                margin: 10px 1vw;
-                width: 80%;
-                height: 500px;
-                font-size: 20px;
-            }
-
-            .container {
-                width: 90%;
-            }
-
-            .card-title {
-                font-size: 26px;
-            }
-
-            .media-icon img {
-                height: 48px;
-            }
-        }
-
-        @media screen and (min-width: 1024px) {
-
-            #julien {
-                margin: 40px auto;
-                width: calc(80% / 3);
-                height: 500px;
-                font-size: 20px;
-            }
-
-            #card-container {
-                flex-direction: row;
-                width: 80vw;
-                flex-wrap: wrap;
-            }
-
-            .card {
-                flex: 1 0;
-                margin: 10px 1vw;
-                min-width: calc(33% - 5vw);
-                height: 500px;
-                font-size: 20px;
-            }
-
-            .card-title {
-                white-space: initial;
-                overflow: visible;
-            }
-
-            .media {
-                align-items: center;
-                margin: 0;
-            }
-
-            .media-icon {
-                flex-direction: column-reverse;
-                max-height: calc(64px + 20px);
-                flex-wrap: wrap;
-            }
-
-            .media-icon img {
-                height: 32px;
-            }
-
-            .media-icon img:nth-child(odd) {
-                margin-bottom: 10px;
-            }
-        }
-
-        </style>
     </head>
     <body>
+
+        <div id="ancre">
+            <img id="img_ancre" src="https://zupimages.net/up/19/44/zkq7.png" alt="img_ancre"/>
+            <div id="tableau">
+                <h4 id="h4tab">Tableau des ancres</h4>
+                <a class="profil" href="#julien">Julien</a>
+                <a class="profil" href="#thomas">Thomas</a>
+                <a class="profil" href="#alexis">Alexis</a>
+                <a class="profil" href="#eloise">Eloise</a>
+                <a class="profil" href="#ugo">Ugo</a>
+                <a class="profil" href="#sibel">Sibel</a>
+                <a class="profil" href="#zakaria">Zakaria</a>
+                <a class="profil" href="#pierre">Pierre</a>
+                <a class="profil" href="#ria">Riad</a>
+                <a class="profil" href="#nadège">Nadège</a>
+                <a class="profil" href="#gautier">Gautier</a>
+                <a class="profil" href="#mehdi">Mehdi</a>
+                <a class="profil" href="#willy">Willy</a>
+            </div>
+    
+        </div>
+
+        <div class="container">
+                <div class="slider"> 
+                    <div id="titre">JS 2019</div>
+                        <div class="slides">
+                            <div class="slide1"></div>
+                            <div class="slide2"></div>
+                            <div class="slide3"></div>
+                        </div>
+                    </div>
+            </div> 
+
         <section id="card-section">
             <div class="card" id="julien">
                     <div class="name-container">
@@ -538,5 +356,9 @@
                     </div>
             </div>
         </section>
+        <footer id="pied_page">
+            <h4 id="txt_pied">Made with <img id="img_pied" src="https://zupimages.net/up/19/44/vf60.png" alt="img_main">by <span id="team">trombino'steam</span></h4>
+        </footer>
     </body>
+    
 </html>
