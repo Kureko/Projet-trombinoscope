@@ -1,0 +1,159 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+}
+
+.slider__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+          animation: check 0.4s linear forwards;
+}
+.slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+  left: 0%;
+}
+.slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+  left: -100%;
+}
+.slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+  left: -200%;
+}
+
+.container{
+    margin: 0 auto; 
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 74px);
+    /*padding-bottom: 40%;*/
+    background: transparent;
+}
+
+#titre {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: Arial; 
+    font-size: 48px;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+}
+
+.slider {
+    height:100% ; 
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.container .slider input {
+    display: none;
+}
+
+#label-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    left: 50%;
+}
+
+.slides {
+    display: flex;
+    width: calc(100vw * 3 );
+    height: 100%;
+    animation: glisse 10s infinite;
+    z-index: -1;
+    background-color: #111;
+}
+
+.slide1 {
+    width: 100%;
+    background: url('Imgprojet1/1.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide2 {
+    width: 100%;
+    background: url('Imgprojet1/2.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide3 {
+    width: 100%;
+    background: url('Imgprojet1/3.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+img {
+
+    
+    height: calc(100vh - 74px);
+}
+
+.nav{
+
+width: 100%;
+height: 11px;
+bottom: 12%;
+position: absolute;
+text-align: center;
+z-index: 99%;
+
+}
+.dots {
+    top: -5px;
+    width: 18px;
+    height:18px;
+    margin : 0 4px;
+    position : relative;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgb (0,0,0,.6);
+}
+
+@keyframes glisse {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-100vw);
+    }
+
+    43% {
+        transform: translateX(-100vw);
+    }
+
+    66% {
+        transform: translateX(-200vw);
+    }
+    76% {
+        transform: translateX(-200vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+
+
+
+
+}
