@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Projet Trombinoscope</title>
+
+        <style>
+
+        :root {
+          --primary-color: black;
+          --secondary-color: white;  
+        }
+
+        #img-julien { background: url('images/Julien pro.jpg'); background-size: cover; background-position: center; }
+        #img-eloise { background: url('images/Elo pro.jpg'); background-size: cover; background-position: center; }
+        #img-ugo { background: url('images/Ugo pro.jpg'); background-size: cover; background-position: center; }
+        #img-thomas { background: url('images/Thomas pro.jpg'); background-size: cover; background-position: center; }
+        #img-nadege { background: url('images/Nadège pro.jpg'); background-size: cover; background-position: center; }
+        #img-alexis { background: url('images/Alexis pro.jpg'); background-size: cover; background-position: center; }
+        #img-willy { background: url('images/Willy pro.jpg'); background-size: cover; background-position: center; }
+        #img-gautier { background: url('images/Gautier Pro.jpg'); background-size: cover; background-position: center; }
+        #img-mehdi { background: url('images/Mehdi pro.jpg'); background-size: cover; background-position: top; }
+        #img-pierre { background: url('images/Pierre pro.jpg'); background-size: cover; background-position: bottom; }
+        #img-riad { background: url('images/Riad pro.jpg'); background-size: cover; background-position: center; }
+        #img-sibel { background: url('images/Sibel pro.jpg'); background-size: cover; background-position: center; }
+        #img-zakaria { background: url('images/Zak pro.jpg'); background-size: cover; background-position: center; }
+        
+        
+        body {
+            margin: 0;
+            font-family: Arial;
+            cursor: default;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .card-section {
+            width: 100vw;
+            margin: 0 auto;
+        }
+
+        #julien {
+            width: 80%;
+            margin: 40px auto;
+        }
+
+        #card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+        }   
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            height: 450px;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            margin: 10px 0;
+            padding: 40px 0 20px 0;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+
+        #formateur {
+            background: black;
+        }
+
+        .name-image {
+            border-radius: 50%;
+            height: 128px;
+            width: 128px;
+        }
+
+        .name-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card ol {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-weight: 400;
+            max-height: 150px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .card li {
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 10px auto;
+        }
+
+        .card .name {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            margin-top: -20px;
+            border-radius: 5px;
+        }
+
+        .card-title {
+            width: 80%;
+            text-align: center;
+            margin: 0;
+            margin-top: 10px;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        .media {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 20px 0;
+            color: var(--primary-color);
+        }
+
+        .media .profil {
+            padding: 10px;
+            background: var(--secondary-color);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .media .media-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .media-icon img {
+            height: 32px;
+            border-radius: 2px;
+            margin: 0 5px;
+        }
+
+        @media screen and (min-width: 640px) {
+
+            .card {
+                margin: 10px 1vw;
+                width: 80%;
+                height: 500px;
+                font-size: 20px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .card-title {
+                font-size: 26px;
+            }
+
+            .media-icon img {
+                height: 48px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+
+            #julien {
+                margin: 40px auto;
+                width: calc(80% / 3);
+                height: 500px;
+                font-size: 20px;
+            }
+
+            #card-container {
+                flex-direction: row;
+                width: 80vw;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                flex: 1 0;
+                margin: 10px 1vw;
+                min-width: calc(33% - 5vw);
+                height: 500px;
+                font-size: 20px;
+            }
+
+            .card-title {
+                white-space: initial;
+                overflow: visible;
+            }
+
+            .media {
+                align-items: center;
+                margin: 0;
+            }
+
+            .media-icon {
+                flex-direction: column-reverse;
+                max-height: calc(64px + 20px);
+                flex-wrap: wrap;
+            }
+
+            .media-icon img {
+                height: 32px;
+            }
+
+            .media-icon img:nth-child(odd) {
+                margin-bottom: 10px;
+            }
+        }
+
+        </style>
+    </head>
+    <body>
+        <section id="card-section">
+            <div class="card" id="julien">
+                    <div class="name-container">
+                        <div id="img-julien" class="name-image"></div>   
+                        <div class="name">Julien ALEXANDRE</div>
+                    </div>
+                    <div class="card-title">BTS Développement</div>
+                    <ol>
+                        <li>Autodidacte</li>
+                        <li>Organisation</li>
+                        <li>Gestion du personnel pour intervention</li>
+                    </ol> 
+                    <div class="media">
+                        <div class="media-icon">
+                            <a target="_blank" href="https://github.com/JuAlexandre">
+                                <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/in/julienalexandre45/">
+                                <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/9506131951530100222-64.png" alt="LinkedIn">
+                            </a>
+                        </div>
+                        <div class="profil">
+                            <a href="">Voir le profil</a>
+                        </div>
+                    </div>
+            </div>
+            <div id="card-container">
+                <div class="card">
+                        <div class="name-container">
+                            <div id="img-eloise" class="name-image"></div>   
+                            <div class="name">Eloïse MARIE</div>
+                        </div>
+                        <div class="card-title">Commercial</div>
+                        <ol>
+                            <li>Pertinente</li>
+                            <li>Dynamique</li>
+                            <li>Aisance relationnelle</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/eloise87">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-ugo" class="name-image"></div>   
+                            <div class="name">Ugo ANGELETTI</div>
+                        </div>
+                        <div class="card-title">Intégrateur Web</div>
+                        <ol>
+                            <li>Travail en équipe</li>
+                            <li>Force de proposition</li>
+                            <li>Volontaire</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/Kureko">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/in/ugo-angeletti-5132a6191/">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/9506131951530100222-64.png" alt="LinkedIn">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-thomas" class="name-image"></div>
+                            <div class="name">Thomas DRYJARD</div>
+                        </div>
+                        <div class="card-title">Bac Pro Gestion Administration</div>
+                        <ol>
+                            <li>Faculté Adaptation</li>
+                            <li>Créatif</li>
+                            <li>Innovant</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/tdryjard">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/in/thomas-d-6ba7b4162/">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/9506131951530100222-64.png" alt="LinkedIn">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-nadege"  class="name-image"></div>   
+                            <div class="name">Nadège LANGRAND</div>
+                        </div>
+                        <div class="card-title">Responsable Qualité</div>
+                        <ol>
+                            <li>Manager</li>
+                            <li>Gestion de projet</li>
+                            <li>Relation client</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/epicea45">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-alexis"  class="name-image"></div>   
+                            <div class="name">Alexis PROVOT</div>
+                        </div>
+                        <div class="card-title">Licence Mathématiques Informatique</div>
+                        <ol>
+                            <li>Capacité à chercher des infos</li>
+                            <li>Autodidacte</li>
+                            <li>Travail en groupe</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/Silaex">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/in/alexis-provot-8588a7193/">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/9506131951530100222-64.png" alt="LinkedIn">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-willy"  class="name-image"></div>   
+                            <div class="name">Willy COCHIN</div>
+                        </div>
+                        <div class="card-title">BTS SAV Véhicule Industriel</div>
+                        <ol>
+                            <li>Appliqué</li>
+                            <li>Gestionnaire Parc Automobile</li>
+                            <li>Relation Client</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/willy45">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-gautier"  class="name-image"></div>   
+                            <div class="name">Gautier GUERI</div>
+                        </div>
+                        <div class="card-title">Licence Réseau Télécom - Spé. dev mobile</div>
+                        <ol>
+                            <li>Autonome</li>
+                            <li>Création / Gestion Projet</li>
+                            <li>Polyvalent</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/Kanmuruuruu">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/in/gautier-gueri-21b78b10a/">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/9506131951530100222-64.png" alt="LinkedIn">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-mehdi"   class="name-image"></div>   
+                            <div class="name">Mehdi AOUAD</div>
+                        </div>
+                        <div class="card-title">Ingénieur Pilote Assisté par Ordinateur</div>
+                        <ol>
+                            <li>Réactif</li>
+                            <li>À l'écoute</li>
+                            <li>Adaptable</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/Biing45">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-pierre"  class="name-image"></div>   
+                            <div class="name">Pierre LEGRAND</div>
+                        </div>
+                        <div class="card-title">Commercial Immobilier</div>
+                        <ol>
+                            <li>Relation Client</li>
+                            <li>Passionné</li>
+                            <li>Professionnel</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/PierreWCS">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/in/pierre-legrain-736a8b14b/">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/9506131951530100222-64.png" alt="LinkedIn">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-riad"  class="name-image"></div>   
+                            <div class="name">Riad ALLAF</div>
+                        </div>
+                        <div class="card-title">Commercial Automobile</div>
+                        <ol>
+                            <li>Polyvalent</li>
+                            <li>Travail en équipe</li>
+                            <li>Organisé</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/ryad-75">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/in/riad-allaf-2477419a/">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/9506131951530100222-64.png" alt="LinkedIn">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-sibel"  class="name-image"></div>   
+                            <div class="name">Sibel KOC</div>
+                        </div>
+                        <div class="card-title">BTS SIO</div>
+                        <ol>
+                            <li>Adaptation</li>
+                            <li>Polyvalente</li>
+                            <li>Autonome</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/sibelk">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="name-container">
+                            <div id="img-zakaria"  class="name-image"></div>   
+                            <div class="name">Zakaria AOUAD</div>
+                        </div>
+                        <div class="card-title">Faculté de Psychologie (Tours)</div>
+                        <ol>
+                            <li>À l'écoute</li>
+                            <li>Engagé</li>
+                            <li>Sociable</li>
+                        </ol> 
+                        <div class="media">
+                            <div class="media-icon">
+                                <a target="_blank" href="https://github.com/zakaria-zak">
+                                    <img src="https://s3.us-east-2.amazonaws.com/upload-icon/uploads/icons/png/4980304831530100220-64.png" alt="Github">
+                                </a>
+                            </div>
+                            <div class="profil">
+                                <a href="">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </body>
+</html>
