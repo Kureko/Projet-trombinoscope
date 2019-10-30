@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+#pied_page{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#txt_pied{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    background-color: #FDA18D;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#img_pied{
+    width: 40px;
+    height: auto;
+    vertical-align: bottom;
+}
+
+#team{
+    font-size: 20px;
+}
