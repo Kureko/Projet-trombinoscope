@@ -81,6 +81,7 @@ body {
       border-bottom-left-radius: 6px;
       border-bottom-right-radius: 6px;
       box-shadow: 7px 7px 7px #312E2E;
+      z-index: 998;
   }
   .dropdown-child a {
       color: darkslategrey;
@@ -110,6 +111,7 @@ body {
       border-bottom-left-radius: 6px;
       border-bottom-right-radius: 6px;
       box-shadow: 7px 7px 7px #312E2E;
+      z-index: 998;
   }
   .dropdown-child2 a {
       color: darkslategrey;
