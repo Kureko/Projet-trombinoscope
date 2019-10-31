@@ -9,8 +9,9 @@
         <style>
 
         :root {
-          --primary-color: black;
-          --secondary-color: white;  
+          --primary-color: rgb(253, 161, 141);
+          --secondary-color: white; 
+          --card-opacity: 0.8; 
         }
 
         #img-julien { background: url('images/Julien pro.jpg'); background-size: cover; background-position: center; }
@@ -62,22 +63,19 @@
         }   
 
         .card {
+            position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             width: 90%;
             height: 450px;
-            background: var(--primary-color);
+            background: rgba(253, 161, 141, 1);
             color: var(--secondary-color);
             margin: 10px 0;
             padding: 40px 0 20px 0;
             font-weight: bold;
             border-radius: 15px;
-        }
-
-        #formateur {
-            background: black;
         }
 
         .name-image {
@@ -90,6 +88,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        .card-title {
+            width: 80%;
+            text-align: center;
+            margin: 0;
+            font-size: 20px;
+            text-decoration: underline;
         }
 
         .card ol {
@@ -118,15 +124,6 @@
             border-radius: 5px;
         }
 
-        .card-title {
-            width: 80%;
-            text-align: center;
-            margin: 0;
-            margin-top: 10px;
-            font-size: 20px;
-            text-decoration: underline;
-        }
-
         .media {
             display: flex;
             justify-content: space-between;
@@ -141,11 +138,14 @@
             background: var(--secondary-color);
             cursor: pointer;
             border-radius: 5px;
+            align-self: flex-end;
         }
 
         .media .media-icon {
+            position: absolute;
             display: flex;
             align-items: center;
+            right: 10%;
         }
 
         .media-icon img {
