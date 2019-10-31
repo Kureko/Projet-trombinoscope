@@ -20,7 +20,7 @@ body {
     padding: 19px;
     text-align: left;
     text-decoration: none;
-    background-color: #72B6F9;
+    background-color: #FDA18D;
     border-top-left-radius: 24px;
     border-bottom-left-radius: 0px;
   }
@@ -29,7 +29,7 @@ body {
       float: none;
       display: flex;
       flex-direction: row;
-      background-color: #72B6F9;
+      background-color: #FDA18D;
       color: darkslategrey;
       border: none;
       cursor: pointer;
@@ -40,7 +40,7 @@ body {
   }
   
   .menu {
-      background-color: #72B6F9;
+      background-color: #FDA18D;
       border-top-right-radius: 0px;
       border-bottom-right-radius: 24px;
       border-top-left-radius: 24px;
@@ -48,7 +48,7 @@ body {
       box-shadow: 7px 7px 7px #312E2E;
   }
   .boutonmenuprincipal {
-      background-color: #72B6F9;
+      background-color: #FDA18D;
       color: darkslategrey;
       border: none;
       cursor: pointer;
@@ -57,9 +57,20 @@ body {
       font-size: 16px;
       }
   .boutonmenuprincipal:hover {
-      background-color: #228BF4;
+      background-color: #FF8C6F;
+      -moz-transition: all .2s ease-in-out; 
+      -webkit-transition: all .2s ease-in-out
       -moz-transition: all .2s ease-in-out; 
       -webkit-transition: all .2s ease-in-out;  
+      transition: all .2s ease-in-out;
+      z-index: 10;
+  }
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+  .dropdown2 {
+      position: relative;;  
       transition: all .2s ease-in-out;
       z-index: 10;
   }
@@ -72,7 +83,7 @@ body {
       display: inline-block
   }
   .dropdown-child {
-      background-color: #72B6F9;
+      background-color: #FF8C6F;
       width: 100%;
       position: absolute; 
       transform: scaleY(0); 
@@ -94,7 +105,7 @@ body {
       transition: all .2s ease-in-out;
   }
   header a:hover{
-      background-color: #228BF4;
+      background-color: #FFDBD2;
       width:auto; 
   }
   .dropdown:hover .dropdown-child {
@@ -102,7 +113,7 @@ body {
       opacity: 1;
   }
   .dropdown-child2 {
-      background-color: #72B6F9;
+      background-color: #FF8C6F;
       width: 100%;
       position: absolute; 
       transform: scaleY(0); 
@@ -128,14 +139,14 @@ body {
       opacity: 1;
   }
   .autrebouton:hover {
-      background-color: #228BF4;
+      background-color: #FF8C6F;
       -moz-transition: all .2s ease-in-out; 
       -webkit-transition: all .2s ease-in-out;  
       transition: all .2s ease-in-out;
       z-index: 10;
   }
   .link:hover{
-      background-color: #228BF4;
+      background-color: #FF8C6F;
       width:auto; 
       border-bottom-left-radius: 6px;
       border-bottom-right-radius: 6px;
@@ -322,26 +333,28 @@ z-index: 99%;
 
 #ancre{
     position: fixed;
-    top: 35%;
+    top: 25%;
     left: 0%;
     display: flex;
     align-items: center;
     height: 110px;
-    width: 110px;
+    width: 90px;
     flex-direction: column;
     overflow: hidden;
     border-radius: 10px;
     z-index: 999;
     transition: all 1s;
+    background-color: #FF896F;
+    border: 1.5px ridge black;
 }
 
 #ancre:hover{
     display: flex;
     align-items: center;
-    height: 550px;
+    height: 570px;
     width: 110px;
     flex-direction: column;
-    background-color: #FDA18D;
+    background-color: #FF896F;
 }
 
 #h4tab{
@@ -393,7 +406,7 @@ z-index: 99%;
     #ancre:hover{
         display: flex;
         align-items: center;
-        height: 560px;
+        height: 590px;
         width: 75px;
         flex-direction: column;
         background-color: #FDA18D;
@@ -406,7 +419,21 @@ z-index: 99%;
     }
 }
 
-
+@media only screen and (max-height: 680px){
+    #ancre{
+            position: fixed;
+            top: 10%;
+            left: 0%;
+            display: flex;
+            align-items: center;
+            height: 80px;
+            width: 75px;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: all 1s;
+    }
+}
 
 
 
@@ -471,6 +498,8 @@ img {
     padding: 40px 0 20px 0;
     font-weight: bold;
     border-radius: 15px;
+    background-color: #FDA18D;
+    border: 4px double #FFEDE9;
 }
 
 #formateur {
@@ -505,11 +534,12 @@ img {
     white-space: nowrap;
     overflow: hidden;
     margin: 10px auto;
+    color: black;
 }
 
 .card .name {
-    background: var(--secondary-color);
-    color: var(--primary-color);
+    background: var(--primary-color);
+    color: var(--secondary-color);
     padding: 5px 10px;
     margin-top: -20px;
     border-radius: 5px;
@@ -522,6 +552,7 @@ img {
     margin-top: 10px;
     font-size: 20px;
     text-decoration: underline;
+    color: black;
 }
 
 .media {
