@@ -93,7 +93,7 @@ body {
       -webkit-transition: all .2s ease-in-out;  
       transition: all .2s ease-in-out;
   }
-  a:hover{
+  header a:hover{
       background-color: #228BF4;
       width:auto; 
   }
