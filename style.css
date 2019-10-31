@@ -1,8 +1,8 @@
 html, body{
-    width: 100%;
-    height: 100%;
-    margin: 0; 
-    scroll-behavior: smooth;    
+    min-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    scroll-behavior: smooth;     
 }
 
 body {
@@ -46,6 +46,7 @@ body {
       border-top-left-radius: 24px;
       border-bottom-left-radius: 0px;
       box-shadow: 7px 7px 7px #312E2E;
+      z-index: 999;
   }
   .boutonmenuprincipal {
       background-color: #72B6F9;
@@ -61,7 +62,6 @@ body {
       -moz-transition: all .2s ease-in-out; 
       -webkit-transition: all .2s ease-in-out;  
       transition: all .2s ease-in-out;
-      z-index: 10;
   }
   .dropdown {
       position: relative;
@@ -93,7 +93,7 @@ body {
       -webkit-transition: all .2s ease-in-out;  
       transition: all .2s ease-in-out;
   }
-  header a:hover{
+  a:hover{
       background-color: #228BF4;
       width:auto; 
   }
@@ -161,9 +161,8 @@ body {
 
 
 .container{
-    margin: 0 auto; 
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: calc(100vh - 74px);
     /*padding-bottom: 40%;*/
     background: transparent;
@@ -182,16 +181,13 @@ body {
     font-size: 48px;
     color: white;
     text-shadow: 0px 0px 5px black;
+    z-index: 1;
 }
 
 .slider {
     height:100% ; 
     width: 100%;
     overflow: hidden;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 
@@ -208,7 +204,7 @@ body {
 .slide1 {
     width: 100%;
     background: url('assets/images/1.jpg');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -216,7 +212,7 @@ body {
 .slide2 {
     width: 100%;
     background: url('assets/images/2.jpg');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -224,7 +220,7 @@ body {
 .slide3 {
     width: 100%;
     background: url('assets/images/3.jpg');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -237,7 +233,7 @@ height: 11px;
 bottom: 12%;
 position: absolute;
 text-align: center;
-z-index: 99%;
+z-index: 999;
 
 }
 
@@ -561,7 +557,7 @@ img {
     }
 
     .container {
-        width: 90%;
+        width: 100%;
     }
 
     .card-title {
