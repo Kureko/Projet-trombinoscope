@@ -17,11 +17,11 @@ body {
     flex-direction: row;
     align-content: center;
     float: left;
-    margin: 0px;
-    padding: 19px;
-    text-align: left;
+    height: auto;
+    width: 96px;
+    margin: 15px 15px;
+    text-align: center;
     text-decoration: none;
-    background-color: rgb(116, 159, 223);
     border-top-left-radius: 24px;
     border-bottom-left-radius: 0px;
   }
@@ -40,9 +40,10 @@ body {
       padding:28px;
       margin-top:0px;
       font-size: 16px;
-      }
+      
+    }
   .bouton-menu:hover {
-      background-color: rgba(116, 159, 223, 0.75);
+      background-color: rgba(116, 159, 223);
       -moz-transition: all .2s ease-in-out; 
       -webkit-transition: all .2s ease-in-out;  
       transition: all .2s ease-in-out;
@@ -53,7 +54,7 @@ body {
   }
 
   .dropdown-child {
-      background-color: rgba(116, 159, 223, 0.9);
+      background-color: rgba(116, 159, 223);
       width: 100%;
       position: absolute; 
       transform: scaleY(0); 
@@ -62,7 +63,7 @@ body {
       opacity: 0;
       border-bottom-left-radius: 6px;
       border-bottom-right-radius: 6px;
-      box-shadow: 0px 7px 7px #312E2E;  
+      box-shadow: 0px 7px 7px #312E2E;
       z-index: 100;
   }
   .dropdown-child a {
@@ -388,13 +389,13 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 999;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #profile {
-    width: 700px;
+    width: 600px;
     height: 700px;
     padding: 40px;
     background: var(--primary-color);
@@ -421,8 +422,8 @@ body {
     font-size: 48px;
     text-align: left;
     margin-left: 40px;
-    box-shadow: 7px 7px 10px rgb(75, 114, 173);
-    animation: experience-name 2s;
+    text-shadow: 0px 5px 5px rgb(75, 114, 173);
+    animation: from-top 2s;
 }
 
 #profile-description {
@@ -430,15 +431,40 @@ body {
     height: calc(100% - 256px);
 }
 
-#experience-title {
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-content ul {
+    list-style-type: none;
+}
+
+.profile-content ul li {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.profile-content-list {
+    position: relative;
+    animation: from-left 2s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.experience-title {
     position: relative;
     text-align: center;
     font-size: 32px;
     font-weight: bold;
-    overflow: hidden;
+    text-shadow: 0px 5px 5px rgb(75, 114, 173);
+    animation: from-left 2.5s forwards;
+    opacity: 0;
+    animation-delay: 1s;
 }
 
-#experience-title::after {
+.experience-title::after {
     content: "";
     position: absolute;
     height: 4px;
@@ -449,7 +475,8 @@ body {
     opacity: 0;
     transition: all .25s;
     animation: experience-title 1s forwards;
-    animation-delay: 2s;
+    animation-delay: 2.5s;
+    text-shadow: 0px 5px 5px rgb(75, 114, 173);
 }
 
 @keyframes experience-title {
@@ -460,7 +487,18 @@ body {
     }
 }
 
-@keyframes experience-name {
+@keyframes from-top {
+    0% {
+        opacity: 0;
+        top: -10%;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes from-left {
     0% {
         opacity: 0;
         left: 10%;
