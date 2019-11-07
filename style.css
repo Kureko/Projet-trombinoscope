@@ -9,6 +9,7 @@ body {
     margin: 0;
     font-family: "Roboto Slab", sans-serif;
     cursor: default;
+    background: #F1F1F1;
 }
 
 .logo {
@@ -20,36 +21,19 @@ body {
     padding: 19px;
     text-align: left;
     text-decoration: none;
-    background-color: #72B6F9;
+    background-color: rgb(116, 159, 223);
     border-top-left-radius: 24px;
     border-bottom-left-radius: 0px;
   }
-  .autrebouton{
-      position: relative;
-      float: none;
-      display: flex;
-      flex-direction: row;
-      background-color: #72B6F9;
-      color: darkslategrey;
-      border: none;
-      cursor: pointer;
-      height: auto;
-      padding: 28px;
-      margin-top: 0px;
-      font-size: 16px;
-  }
+ 
   
   .menu {
-      background-color: #72B6F9;
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 24px;
-      border-top-left-radius: 24px;
-      border-bottom-left-radius: 0px;
-      box-shadow: 7px 7px 7px #312E2E;
+      background-color: rgb(116, 159, 223);
+      box-shadow: 0px 7px 7px black;
       z-index: 999;
   }
-  .boutonmenuprincipal {
-      background-color: #72B6F9;
+  .bouton-menu {
+      background-color: rgb(116, 159, 223);
       color: darkslategrey;
       border: none;
       cursor: pointer;
@@ -57,8 +41,8 @@ body {
       margin-top:0px;
       font-size: 16px;
       }
-  .boutonmenuprincipal:hover {
-      background-color: #228BF4;
+  .bouton-menu:hover {
+      background-color: rgba(116, 159, 223, 0.75);
       -moz-transition: all .2s ease-in-out; 
       -webkit-transition: all .2s ease-in-out;  
       transition: all .2s ease-in-out;
@@ -67,12 +51,9 @@ body {
       position: relative;
       display: inline-block;
   }
-  .dropdown2 {
-      position: relative;
-      display: inline-block
-  }
+
   .dropdown-child {
-      background-color: #72B6F9;
+      background-color: rgba(116, 159, 223, 0.9);
       width: 100%;
       position: absolute; 
       transform: scaleY(0); 
@@ -81,8 +62,8 @@ body {
       opacity: 0;
       border-bottom-left-radius: 6px;
       border-bottom-right-radius: 6px;
-      box-shadow: 7px 7px 7px #312E2E;
-      z-index: 998;
+      box-shadow: 0px 7px 7px #312E2E;  
+      z-index: 100;
   }
   .dropdown-child a {
       color: darkslategrey;
@@ -93,46 +74,13 @@ body {
       -webkit-transition: all .2s ease-in-out;  
       transition: all .2s ease-in-out;
   }
-  a:hover{
-      background-color: #228BF4;
+    .menu a:hover{
+      background-color: rgb(99, 143, 209);
       width:auto; 
   }
   .dropdown:hover .dropdown-child {
       transform: scaleY(1);
       opacity: 1;
-  }
-  .dropdown-child2 {
-      background-color: #72B6F9;
-      width: 100%;
-      position: absolute; 
-      transform: scaleY(0); 
-      transform-origin: top;
-      transition: transform .25s;
-      opacity: 0;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
-      box-shadow: 7px 7px 7px #312E2E;
-      z-index: 998;
-  }
-  .dropdown-child2 a {
-      color: darkslategrey;
-      padding: 20px;
-      text-decoration: none;
-      display: block;
-      -moz-transition: all .2s ease-in-out; 
-      -webkit-transition: all .2s ease-in-out;  
-      transition: all .2s ease-in-out;
-  }
-  .dropdown2:hover .dropdown-child2 {
-      transform: scaleY(1);
-      opacity: 1;
-  }
-  .autrebouton:hover {
-      background-color: #228BF4;
-      -moz-transition: all .2s ease-in-out; 
-      -webkit-transition: all .2s ease-in-out;  
-      transition: all .2s ease-in-out;
-      z-index: 10;
   }
   .link:hover{
       background-color: #228BF4;
@@ -145,13 +93,12 @@ body {
           padding: 1px;
           font-size: 14px;
           display: flex;
-          flex-flow: row wrap;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-items: center;
       }
-      .boutonmenuprincipal {
-          font-size: 14px;
-      }
-      .autrebouton {
-          font-size: 14px;
+      .bouton-menu {
+          font-size: 12px;
       }
       .logo {
           border-top-left-radius: 24px;
@@ -159,6 +106,8 @@ body {
       }
   }
 
+
+  /* -------- Eloïse ------------------ */
 
 .container{
     position: relative;
@@ -211,7 +160,7 @@ body {
 
 .slide2 {
     width: 100%;
-    background: url('assets/images/2.jpg');
+    background: url('assets/images/toit.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -219,23 +168,14 @@ body {
 
 .slide3 {
     width: 100%;
-    background: url('assets/images/3.jpg');
+    background: url('assets/images/labo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 
-.nav{
 
-width: 100%;
-height: 11px;
-bottom: 12%;
-position: absolute;
-text-align: center;
-z-index: 999;
-
-}
 
 
 @keyframes glisse {
@@ -270,13 +210,14 @@ z-index: 999;
 
 #pied_page{
     width: 100%;
+    margin-top: 80px;
 }
 
 #txt_pied{
     text-align: center;
     font-family: 'Amatic SC', cursive;
     font-size: 30px;
-    background-color: #FDA18D;
+    background-color: rgb(116, 159, 223);
 }
 
 #txt_pied {
@@ -318,8 +259,8 @@ z-index: 999;
 
 #ancre{
     position: fixed;
-    top: 35%;
-    left: 0%;
+    top: 25%;
+    left: 1%;
     display: flex;
     align-items: center;
     height: 110px;
@@ -327,6 +268,7 @@ z-index: 999;
     flex-direction: column;
     overflow: hidden;
     border-radius: 10px;
+    padding: 10px;
     z-index: 999;
     transition: all 1s;
 }
@@ -337,7 +279,7 @@ z-index: 999;
     height: 550px;
     width: 110px;
     flex-direction: column;
-    background-color: #FDA18D;
+    background-color: rgb(150, 185, 236);
 }
 
 #h4tab{
@@ -392,7 +334,6 @@ z-index: 999;
         height: 560px;
         width: 75px;
         flex-direction: column;
-        background-color: #FDA18D;
     }
     
     #h4tab{
@@ -404,11 +345,11 @@ z-index: 999;
 
 
 
-
+/* ----------------  Alexis  ------------------------- */
 
 :root {
-    --primary-color: black;
-    --secondary-color: white;  
+    --primary-color: rgb(116, 159, 223);
+    --secondary-color: #F1F1F1;  
 }
 
 #img-julien { background: url('assets/images/Julien pro.jpg'); background-size: cover; background-position: center; }
@@ -427,15 +368,110 @@ z-index: 999;
 
 
 
-a {
+#card-section a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
 }
 
-img {
+.card img {
     vertical-align: middle;
 }
+
+/*  -------  BEGINNING PROFILE SECTION  ------- */
+
+#profile-watching {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile {
+    width: 700px;
+    height: 700px;
+    padding: 40px;
+    background: var(--primary-color);
+    border-radius: 20px;
+    color: white;
+}
+
+#profile-head {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+#profile-image {
+    width: 256px;
+    height: 256px;
+    border-radius: 10px;
+    background: url('assets/images/Julien pro.jpg');
+    background-size: cover;
+}
+
+#profile-name {
+    position: relative;
+    font-size: 48px;
+    text-align: left;
+    margin-left: 40px;
+    box-shadow: 7px 7px 10px rgb(75, 114, 173);
+    animation: experience-name 2s;
+}
+
+#profile-description {
+    margin: 20px 10px;
+    height: calc(100% - 256px);
+}
+
+#experience-title {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+#experience-title::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: white;
+    bottom: -6px;
+    right: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: all .25s;
+    animation: experience-title 1s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes experience-title {
+    100% {
+        left: 0;
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes experience-name {
+    0% {
+        opacity: 0;
+        left: 10%;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/*  ---------  END PROFILE SECTION  --------- */
 
 .card-section {
     width: 100vw;
@@ -467,6 +503,9 @@ img {
     padding: 40px 0 20px 0;
     font-weight: bold;
     border-radius: 15px;
+    box-shadow: 0px 5px 10px #A1A1A1;
+    transition: all .25s; 
+    cursor: pointer;
 }
 
 #formateur {
@@ -485,6 +524,32 @@ img {
     align-items: center;
 }
 
+.name-container .name {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    margin-top: -20px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.fun-mode {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all .5s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.card:hover .fun-mode {
+    opacity: 1;
+}
+
 .card ol {
     padding: 0;
     margin: 0;
@@ -501,14 +566,6 @@ img {
     white-space: nowrap;
     overflow: hidden;
     margin: 10px auto;
-}
-
-.card .name {
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 5px 10px;
-    margin-top: -20px;
-    border-radius: 5px;
 }
 
 .card-title {
@@ -537,7 +594,7 @@ img {
 }
 
 .media .media-icon {
-    display: flex;
+    display: absolute;
     align-items: center;
 }
 
@@ -545,6 +602,11 @@ img {
     height: 32px;
     border-radius: 2px;
     margin: 0 5px;
+    transition: transform .25s;
+}
+
+.media-icon img:hover {
+    transform: scale(1.1);
 }
 
 @media screen and (min-width: 640px) {
