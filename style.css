@@ -16,8 +16,11 @@ body {
     display: flex;
     flex-direction: row;
     align-content: center;
+    background: url('assets/images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     float: left;
-    height: auto;
+    height: 96px;
     width: 96px;
     margin: 15px 15px;
     text-align: center;
@@ -26,14 +29,50 @@ body {
     border-bottom-left-radius: 0px;
   }
  
-  .photo {
+  .photo-fun, .photo-pro {
       display: flex;
       flex-flow: row wrap;
-      align-content: space-between;
+      align-content: space-aound;
       align-items: center;
       height: 800px;
-      width: 240px;
+      width: 80%;
   }
+
+  .photo-pro div, .photo-fun div {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 5px;
+  }
+
+  .photo-pro #alexis-photo { background: url('assets/imagesGallery/Photos pro/Alexis pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #eloise-photo { background: url('assets/imagesGallery/Photos pro/Elo pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #gautier-photo { background: url('assets/imagesGallery/Photos pro/Gautier pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #julien-photo { background: url('assets/imagesGallery/Photos pro/Julien pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #mehdi-photo { background: url('assets/imagesGallery/Photos pro/Mehdi pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #nadège-photo { background: url('assets/imagesGallery/Photos pro/Nadège pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #pierre-photo { background: url('assets/imagesGallery/Photos pro/Pierre pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #riad-photo { background: url('assets/imagesGallery/Photos pro/Riad pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #sibel-photo { background: url('assets/imagesGallery/Photos pro/Sibel pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #thomas-photo { background: url('assets/imagesGallery/Photos pro/Thomas pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #ugo-photo { background: url('assets/imagesGallery/Photos pro/Ugo pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #willy-photo { background: url('assets/imagesGallery/Photos pro/Willy pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #zak-photo { background: url('assets/imagesGallery/Photos pro/Zak pro.jpg'); background-size: cover; background-position: center; }
+
+  .photo-fun #alexis-photo { background: url('assets/imagesGallery/Photos fun/Alexis fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #eloise-photo { background: url('assets/imagesGallery/Photos fun/Elo fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #gautier-photo { background: url('assets/imagesGallery/Photos fun/Gautier fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #julien-photo { background: url('assets/imagesGallery/Photos fun/Julien fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #mehdi-photo { background: url('assets/imagesGallery/Photos fun/Mehdi fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #nadège-photo { background: url('assets/imagesGallery/Photos fun/Nadège fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #pierre-photo { background: url('assets/imagesGallery/Photos fun/Pierre fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #riad-photo { background: url('assets/imagesGallery/Photos fun/Riad fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #sibel-photo { background: url('assets/imagesGallery/Photos fun/Sibel fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #thomas-photo { background: url('assets/imagesGallery/Photos fun/Thomas fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #ugo-photo { background: url('assets/imagesGallery/Photos fun/Ugo fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #willy-photo { background: url('assets/imagesGallery/Photos fun/Willy fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #zak-photo { background: url('assets/imagesGallery/Photos fun/Zak fun.jpg'); background-size: cover; background-position: center; }
+
   .menu {
       background-color: rgb(116, 159, 223);
       box-shadow: 0px 7px 7px black;
@@ -139,13 +178,15 @@ body {
     font-size: 48px;
     color:rgb(116, 159, 223);
     z-index: 1;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .slider {
     height:100% ; 
     width: 100%;
     overflow: hidden;
+    position: absolute;
+    top: 0;
 }
 
 
@@ -246,11 +287,19 @@ body {
 
 #img_ancre{
     display: flex;
-    width: 70px;
-    height: auto;
-    justify-content: center;
-    margin-left: 1px;
-    padding-top: 10px;
+    flex-direction: row;
+    align-content: center;
+    background: url('assets/images/logo_ancre.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(150, 185, 236);
+    background-position: center;
+    border: none;
+    border-radius: 20px;
+    float: left;
+    height: 96px;
+    width: 96px;
+    margin: 15px 15px;
 }
 
 #tableau
@@ -277,6 +326,7 @@ body {
     width: 110px;
     flex-direction: column;
     overflow: hidden;
+    border: none;
     border-radius: 10px;
     padding: 10px;
     z-index: 999;
@@ -398,15 +448,18 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 999;
-    display: flex;
+    display: none;
+    opacity: 0;
     justify-content: center;
     align-items: center;
+    animation: spawn .5s forwards;
 }
 
 #profile {
-    width: 600px;
-    height: 700px;
-    padding: 40px;
+    width: 80%;
+    min-height: 300px;
+    height: 80%;
+    padding: 10px 20px;
     background: var(--primary-color);
     border-radius: 20px;
     color: white;
@@ -419,8 +472,8 @@ body {
 }
 
 #profile-image {
-    width: 256px;
-    height: 256px;
+    width: 160px;
+    height: 160px;
     border-radius: 10px;
     background: url('assets/images/Julien pro.jpg');
     background-size: cover;
@@ -428,14 +481,15 @@ body {
 
 #profile-name {
     position: relative;
-    font-size: 48px;
+    font-size: 2em;
     text-align: left;
-    margin-left: 40px;
+    margin-left: 20px;
     text-shadow: 0px 5px 5px rgb(75, 114, 173);
-    animation: from-top 2s;
+    animation: from-top 1s;
 }
 
 #profile-description {
+    font-size: 1em;
     margin: 20px 10px;
     height: calc(100% - 256px);
 }
@@ -451,13 +505,14 @@ body {
 }
 
 .profile-content ul li {
-    margin: 20px 0;
+    font-size: 1em;
+    margin: 5px 0;
     font-size: 18px;
 }
 
 .profile-content-list {
     position: relative;
-    animation: from-left 2s forwards;
+    animation: from-left 1s forwards;
     animation-delay: 2s;
     opacity: 0;
 }
@@ -465,10 +520,10 @@ body {
 .experience-title {
     position: relative;
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
     text-shadow: 0px 5px 5px rgb(75, 114, 173);
-    animation: from-left 2.5s forwards;
+    animation: from-left 1.5s forwards;
     opacity: 0;
     animation-delay: 1s;
 }
@@ -492,6 +547,12 @@ body {
     100% {
         left: 0;
         right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes spawn {
+    100% {
         opacity: 1;
     }
 }
@@ -653,7 +714,7 @@ body {
 }
 
 .media-icon img:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px);
 }
 
 @media screen and (min-width: 640px) {
@@ -679,6 +740,29 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+
+    #profile {
+        width: 40%;     
+        height: 700px;
+        padding: 40px;
+    }
+
+    #profile-image {
+        width: 256px; 
+        height: 256px;
+    }
+
+    #profile-name {
+        font-size: 4em;
+    }
+    
+    .profile-content ul li {
+        font-size: 1em;
+        margin: 20px 0;
+    }
+    .experience-title {
+        font-size: 36px;
+    }
 
     #julien {
         margin: 40px auto;
