@@ -1,5 +1,3 @@
-
-
 const noms = ["alexis", "eloise", "gautier", "julien", "mehdi", "nadège", "pierre", "riad", "sibel", "thomas", "ugo", "willy", "zakaria"];
 
 const allCards = document.getElementsByClassName('card')
@@ -99,4 +97,43 @@ const photos = {
     zakaria: "assets/images/Zak pro.jpg",
 }
 
+const nav_principal = document.querySelector('#principal');
+const nav_formation = document.querySelector('#formation');
+const img_burger = document.querySelector('#burger');
+const deroulant_nav = document.querySelector('.dropdown-child');
+const drop2 = document.querySelector('#drop2')
+const logo_nav = document.querySelector('.logo_nav')
+const menu = document.querySelector('.menu')
+let select = false;
 
+
+img_burger.addEventListener('click', () => {
+        drop2.style.transform = ('scaleY(1)');
+        drop2.style.opacity = ('1')
+        deroulant_nav.style.transform = ('scaleY(1)');
+        deroulant_nav.style.opacity = ('1')
+        nav_formation.style.display = ('block');
+        nav_principal.style.display = ('block');
+        logo_nav.style.display = ('none');
+        img_burger.style.backgroundImage = (`url("assets/images/croix.png")`);
+        img_burger.style.marginTop = ('0px')
+        nav_formation.style.marginTop = ('55px')
+        nav_principal.style.marginTop = ('55px')
+        menu.style.paddingBottom = ('5px')
+        select = !select;
+
+        if (!select) {
+            drop2.style.transform = ('scaleY(0)');
+            drop2.style.opacity = ('0')
+            deroulant_nav.style.transform = ('scaleY(0)');
+            deroulant_nav.style.opacity = ('0')
+            nav_formation.style.display = ('none');
+            nav_principal.style.display = ('none');
+            logo_nav.style.display = ('block');
+            img_burger.style.backgroundImage = (`url("assets/images/icon_burger.png")`);
+            img_burger.style.marginTop = ('40px')
+            menu.style.paddingBottom = ('50px')
+        }
+    })
+
+    
