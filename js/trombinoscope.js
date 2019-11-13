@@ -119,7 +119,7 @@ img_burger.addEventListener('click', () => {
         img_burger.style.marginTop = ('0px')
         nav_formation.style.marginTop = ('55px')
         nav_principal.style.marginTop = ('55px')
-        menu.style.paddingBottom = ('5px')
+        menu.style.paddingBottom = ('190px')
         select = !select;
 
         if (!select) {
@@ -136,4 +136,7 @@ img_burger.addEventListener('click', () => {
         }
     })
 
+    nav_principal.addEventListener('mouseover', () => {
+        nav_principal.style.marginTop = ('0')
+    })
     

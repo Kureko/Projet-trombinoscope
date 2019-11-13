@@ -19,10 +19,11 @@ body {
     background: url('assets/images/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     float: left;
-    height: 96px;
-    width: 96px;
-    margin: 15px 15px;
+    height: 236px;
+    width: 236px;
+    margin: 0 40px;
     text-align: center;
     text-decoration: none;
     border-top-left-radius: 24px;
@@ -75,18 +76,20 @@ body {
 
   .menu {
       background-color: #f99797;
-      box-shadow: 0px 7px 7px black;
       z-index: 999;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
   }
   .bouton-menu {
+      color: white;
+      font-size: 35px;
       background-color: #f99797;
-      color: darkslategrey;
       border: none;
       cursor: pointer;
       padding:28px;
-      margin-top:0px;
-      font-size: 16px;
-
+      margin-bottom: 8px;
     }
   .bouton-menu:hover {
       background-color: #EC9191;
@@ -112,7 +115,6 @@ body {
       z-index: 100;
   }
   .dropdown-child a {
-      color: darkslategrey;
       padding: 20px;
       text-decoration: none;
       display: block;
@@ -128,6 +130,9 @@ body {
       transform: scaleY(1);
       opacity: 1;
   }
+  .link{
+      color: white;
+  }
   .link:hover{
       background-color: #DE8888;
       width:auto; 
@@ -138,6 +143,9 @@ body {
   #burger{
       display: none;
   }
+
+  
+
   @media screen and (max-width: 961px){                                         /*Nav telephone*/
       .menu {
           padding-bottom: 50px;
@@ -154,7 +162,7 @@ body {
         background-position:center;
         display: inline-block;
         position: absolute;
-        margin-left: 43%;
+        margin-left: 45%;
         margin-right: auto;
         z-index: 50;
         margin-top: 45px;
@@ -165,8 +173,8 @@ body {
       }
       #principal{
           margin-top: 15px;
-          margin-left: 10px;
-          font-size: 15px;
+          margin-left: 18px;
+          font-size: 17px;
           display: none;
           padding: 0;
           padding-right: 41px;
@@ -175,7 +183,7 @@ body {
       #formation{
           margin-top: 15px;
           margin-left: 10px;
-          font-size: 15px;
+          font-size: 17px;
           display: none;
           padding: 0;
           padding-left: 0px;
@@ -195,8 +203,9 @@ body {
           border-top-left-radius: 24px;
           border-bottom-left-radius: 0px;
           margin: 0;
-          height: 50px;
-          padding: 0;
+          height: 80px;
+          padding: 80px;
+          width: 80px;
       }
       .dropdown-child a{
           display: block;
@@ -217,20 +226,17 @@ body {
 }
 
 #titre {
-    position: absolute;
-    top: 20px;
-    left: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 10px;
-    margin-left: 33%;
-    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     font-family: "rubik",sans-serif; 
     font-size: 48px;
-    color:rgb(116, 159, 223);
+    color:#DE8888;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(255, 255, 255);
 }
 
 .slider {
@@ -245,6 +251,7 @@ body {
 
 .slides {
     display: flex;
+    justify-content: center;
     width: calc(100vw * 3 );
     height: 100%;
     animation: glisse 25s infinite;
