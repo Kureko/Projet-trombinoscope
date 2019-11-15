@@ -585,7 +585,6 @@ body {
     font-size: 2em;
     text-align: left;
     margin-left: 20px;
-    text-shadow: 0px 5px 5px rgba(222, 136, 136, 0.925);
     animation: from-top 1s;
 }
 
@@ -625,7 +624,6 @@ body {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 0px 5px 5px rgba(222, 136, 136, 0.925);
     animation: from-left 1.5s forwards;
     opacity: 0;
     animation-delay: 1s;
