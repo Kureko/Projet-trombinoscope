@@ -82,19 +82,19 @@ const experience = {
 }
 
 const photos = {
-    julien: "assets/images/Julien pro.jpg",
-    alexis: "assets/images/Alexis pro.jpg",
-    eloise: "assets/images/Elo pro.jpg",
-    gautier: "assets/images/Gautier pro.jpg",
-    mehdi: "assets/images/Mehdi pro.jpg",
-    nadège: "assets/images/Nadège pro.jpg",
-    pierre: "assets/images/Pierre pro.jpg",
-    riad: "assets/images/Riad pro.jpg",
-    sibel: "assets/images/Sibel pro.jpg",
-    thomas: "assets/images/Thomas pro.jpg",
-    ugo: "assets/images/Ugo pro.jpg",
-    willy: "assets/images/Willy pro.jpg",
-    zakaria: "assets/images/Zak pro.jpg",
+    julien: "assets/Photos pro/Julien pro.jpg",
+    alexis: "assets/Photos pro/Alexis pro.jpg",
+    eloise: "assets/Photos pro/Elo pro.jpg",
+    gautier: "assets/Photos pro/Gautier pro.jpg",
+    mehdi: "assets/Photos pro/Mehdi pro.jpg",
+    nadège: "assets/Photos pro/Nadège pro.jpg",
+    pierre: "assets/Photos pro/Pierre pro.jpg",
+    riad: "assets/Photos pro/Riad pro.jpg",
+    sibel: "assets/Photos pro/Sibel pro.jpg",
+    thomas: "assets/Photos pro/Thomas pro.jpg",
+    ugo: "assets/Photos pro/Ugo pro.jpg",
+    willy: "assets/Photos pro/Willy pro.jpg",
+    zakaria: "assets/Photos pro/Zak pro.jpg",
 }
 
 const nav_principal = document.querySelector('#principal');
@@ -119,7 +119,7 @@ img_burger.addEventListener('click', () => {
         img_burger.style.marginTop = ('0px')
         nav_formation.style.marginTop = ('55px')
         nav_principal.style.marginTop = ('55px')
-        menu.style.paddingBottom = ('5px')
+        menu.style.paddingBottom = ('190px')
         select = !select;
 
         if (!select) {
@@ -135,5 +135,4 @@ img_burger.addEventListener('click', () => {
             menu.style.paddingBottom = ('50px')
         }
     })
-
     
